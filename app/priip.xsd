@@ -1,0 +1,267 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="priip">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="data">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="product">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="priipCloudProductTemplate"/>
+                    <xs:element type="xs:string" name="priipCloudProductType"/>
+                    <xs:element type="xs:string" name="productIdentifier"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="manufacturer">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="id"/>
+                    <xs:element type="xs:string" name="nameLong"/>
+                    <xs:element type="xs:string" name="nameShort"/>
+                    <xs:element type="xs:string" name="address"/>
+                    <xs:element type="xs:string" name="telephoneNumber"/>
+                    <xs:element type="xs:anyURI" name="website"/>
+                    <xs:element type="xs:string" name="email"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="document">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="type"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="properties">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="includeEarlyRedemptionInExtraordinaryEventsAlert"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:date" name="tradeDate"/>
+              <xs:element type="xs:date" name="effectiveDate"/>
+              <xs:element name="fxSwap">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="holder"/>
+                    <xs:element type="xs:string" name="currencyPair"/>
+                    <xs:element type="xs:int" name="notionalAmount"/>
+                    <xs:element type="xs:string" name="notionalAmountCurrency"/>
+                    <xs:element type="xs:date" name="terminationDate"/>
+                    <xs:element name="forwardRate">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:float" name="value"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="spotRate">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:float" name="value"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="costs">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:float" name="entryCosts"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="riskMeasures">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="sriRelatedValues">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:byte" name="valueAtRisk"/>
+                          <xs:element type="xs:byte" name="valueAtRiskEquivalentVolatility"/>
+                          <xs:element type="xs:byte" name="mrm"/>
+                          <xs:element type="xs:byte" name="crm"/>
+                          <xs:element type="xs:byte" name="sri"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="performanceScenariosRelatedValues">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:float" name="positiveScenarioPayoutRHP"/>
+                          <xs:element type="xs:float" name="positiveScenarioActualReturnRHP"/>
+                          <xs:element type="xs:float" name="positiveScenarioAverageReturnPerYearRHP"/>
+                          <xs:element type="xs:string" name="positiveScenarioPayoutIHP1"/>
+                          <xs:element type="xs:string" name="positiveScenarioActualReturnIHP1"/>
+                          <xs:element type="xs:string" name="positiveScenarioAverageReturnPerYearIHP1"/>
+                          <xs:element type="xs:string" name="positiveScenarioPayoutIHP2"/>
+                          <xs:element type="xs:string" name="positiveScenarioActualReturnIHP2"/>
+                          <xs:element type="xs:string" name="positiveScenarioAverageReturnPerYearIHP2"/>
+                          <xs:element type="xs:float" name="moderateScenarioPayoutRHP"/>
+                          <xs:element type="xs:float" name="moderateScenarioActualReturnRHP"/>
+                          <xs:element type="xs:float" name="moderateScenarioAverageReturnPerYearRHP"/>
+                          <xs:element type="xs:string" name="moderateScenarioPayoutIHP1"/>
+                          <xs:element type="xs:string" name="moderateScenarioActualReturnIHP1"/>
+                          <xs:element type="xs:string" name="moderateScenarioAverageReturnPerYearIHP1"/>
+                          <xs:element type="xs:string" name="moderateScenarioPayoutIHP2"/>
+                          <xs:element type="xs:string" name="moderateScenarioActualReturnIHP2"/>
+                          <xs:element type="xs:string" name="moderateScenarioAverageReturnPerYearIHP2"/>
+                          <xs:element type="xs:float" name="negativeScenarioPayoutRHP"/>
+                          <xs:element type="xs:float" name="negativeScenarioActualReturnRHP"/>
+                          <xs:element type="xs:float" name="negativeScenarioAverageReturnPerYearRHP"/>
+                          <xs:element type="xs:string" name="negativeScenarioPayoutIHP1"/>
+                          <xs:element type="xs:string" name="negativeScenarioActualReturnIHP1"/>
+                          <xs:element type="xs:string" name="negativeScenarioAverageReturnPerYearIHP1"/>
+                          <xs:element type="xs:string" name="negativeScenarioPayoutIHP2"/>
+                          <xs:element type="xs:string" name="negativeScenarioActualReturnIHP2"/>
+                          <xs:element type="xs:string" name="negativeScenarioAverageReturnPerYearIHP2"/>
+                          <xs:element type="xs:float" name="stressScenarioPayoutRHP"/>
+                          <xs:element type="xs:float" name="stressScenarioActualReturnRHP"/>
+                          <xs:element type="xs:float" name="stressScenarioAverageReturnPerYearRHP"/>
+                          <xs:element type="xs:string" name="stressScenarioPayoutIHP1"/>
+                          <xs:element type="xs:string" name="stressScenarioActualReturnIHP1"/>
+                          <xs:element type="xs:string" name="stressScenarioAverageReturnPerYearIHP1"/>
+                          <xs:element type="xs:string" name="stressScenarioPayoutIHP2"/>
+                          <xs:element type="xs:string" name="stressScenarioActualReturnIHP2"/>
+                          <xs:element type="xs:string" name="stressScenarioAverageReturnPerYearIHP2"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="version"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="costOutputs">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="costsOverTime">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="totalCostsRHP">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:float" name="value"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="totalCostsIHP1">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="value"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="totalCostsIHP2">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="value"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="reductionInActualYieldRHP">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:float" name="value"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="reductionInActualYieldIHP1">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="value"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="reductionInActualYieldIHP2">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="value"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="reductionInYieldRHP">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:float" name="value"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="reductionInYieldIHP1">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="value"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="reductionInYieldIHP2">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="value"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="compositionOfCosts">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="actualEntryCosts">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:float" name="value"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="actualOtherRecurringCostsPA">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="value"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="actualExitCosts">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:byte" name="value"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="entryCosts">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:float" name="value"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="otherRecurringCostsPA">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="value"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="exitCosts">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:byte" name="value"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
